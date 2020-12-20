@@ -1,10 +1,10 @@
-# RPCGrid
+# AIORPCGrid (Restructure)   DON'T USE THIS
 
 Remote procedure call package for any protocol and any transport layer.
 ## Quickstart
 #### Installation
 ```shell script
-pip install rpcgrid
+pip install aiorpcgrid
 ```
 #### Server side
 ```python
