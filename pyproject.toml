@@ -34,7 +34,7 @@ classifiers = [
 ]
 [tool.poetry.dependencies]
 python = "^3.6"
-aio-pika = {version = "^6.7.1", extras = ["rabbit","all"]}
+aio-pika = {version = "^6.7.1", extras = ["rabbit"]}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
