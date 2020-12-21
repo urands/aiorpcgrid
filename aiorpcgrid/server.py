@@ -1,10 +1,10 @@
 import asyncio
 
-from rpcgrid.server import GlobalMethods, Methods, Server
-from rpcgrid.task import State
+# from aiorpcgrid import GlobalMethods, Methods, Server
+from aiorpcgrid.task import State
 
 
-class AsyncMethods(Methods):
+class AsyncMethods():
     async def call(self, method, *args, **kwargs):
         if method in self._methods:
             return await self._methods[method](*args, **kwargs)
@@ -20,9 +20,9 @@ class GlobalAsyncMethods(AsyncMethods):
         return class_._instance
 
 
-class AsyncServer(Server):
+class AsyncServer():
     _loop = None
-    _response_queue = asyncio.Queue()
+    _response_queue: asyncio.Queue = asyncio.Queue()
 
     def __init__(self, provider, loop=None):
         self._provider = provider

@@ -1,15 +1,15 @@
 import asyncio
 
-from rpcgrid.aio.task import AsyncTask, State
-from rpcgrid.client import Client
+# from aiorpcgrid.client import Client
+from aiorpcgrid.task import AsyncTask, State
 
 
-class AsyncClient(Client):
+class AsyncClient():
     _provider = None
     _method = None
-    _requests = {}
+    _requests: dict = {}
     _running = True
-    _request_queue = asyncio.Queue()
+    _request_queue: asyncio.Queue = asyncio.Queue()
     _loop = None
 
     def __init__(self, provider, loop=None):

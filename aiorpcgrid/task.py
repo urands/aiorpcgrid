@@ -1,10 +1,16 @@
 import asyncio
+from enum import IntEnum, auto
 from uuid import uuid4
 
-from rpcgrid.task import State, Task
+class State(IntEnum):
+    COMPLETED = 0
+    CREATED = auto()
+    PENDING = auto()
+    RUNNING = auto()
+    FAILED = auto()
+    TIMEOUT = auto()
 
-
-class AsyncTask(Task):
+class AsyncTask():
 
     _parallel = True
 

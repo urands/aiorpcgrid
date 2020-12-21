@@ -1,6 +1,6 @@
 import asyncio
 
-from rpcgrid.aio.providers.base import AsyncBaseProvider
+from aiorpcgrid.providers.base import AsyncBaseProvider
 
 
 class LocalProvider(AsyncBaseProvider):

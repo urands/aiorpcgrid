@@ -1,10 +1,10 @@
-#import sys
+# import sys
 
 # import warnings
 # import pkg_resources # noqa: F401
-#from rpcgrid.aio.rpcgrid import create, open, register  # noqa: F401
+# from rpcgrid.aio.rpcgrid import create, open, register  # noqa: F401
 
-#if sys.version_info < (3, 5):
+# if sys.version_info < (3, 5):
 #    raise EnvironmentError(
 #        "Python 3.5 or above is required. "
 #        "Note that support for Python 3.5 will be removed in aiorpcgrid.py v5"

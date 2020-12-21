@@ -1,7 +1,7 @@
 import asyncio
 
-from rpcgrid.aio.providers.base import AsyncBaseProvider
-from rpcgrid.protocol.jsonrpc import JsonRPC
+from aiorpcgrid.protocol.jsonrpc import JsonRPC
+from aiorpcgrid.providers.base import AsyncBaseProvider
 
 
 class SocketProvider(AsyncBaseProvider):

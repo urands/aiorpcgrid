@@ -1,8 +1,9 @@
 import asyncio
 
 import aio_pika
-from rpcgrid.aio.providers.base import AsyncBaseProvider
-from rpcgrid.protocol.jsonrpc import JsonRPC
+
+from aiorpcgrid.protocol.jsonrpc import JsonRPC
+from aiorpcgrid.providers.base import AsyncBaseProvider
 
 
 async def process_e(message: aio_pika.IncomingMessage):
@@ -13,7 +14,7 @@ async def process_e(message: aio_pika.IncomingMessage):
 
 class RabbitProvider(AsyncBaseProvider):
     _protocol = None
-    _queue = None
+    #_queue = None
     _remote_queue = None
     _timeout = None
     _remote_queue_name = None

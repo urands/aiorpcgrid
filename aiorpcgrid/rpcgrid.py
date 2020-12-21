@@ -1,7 +1,7 @@
-from rpcgrid.aio.client import AsyncClient
-from rpcgrid.aio.providers.local import LocalProvider
-from rpcgrid.aio.server import AsyncServer, GlobalAsyncMethods
-from rpcgrid.protocol.jsonrpc import JsonRPC
+from aiorpcgrid.client import AsyncClient
+from aiorpcgrid.protocol.jsonrpc import JsonRPC
+from aiorpcgrid.providers.local import LocalProvider
+from aiorpcgrid.server import AsyncServer, GlobalAsyncMethods
 
 
 def register(func=None, name=None):
