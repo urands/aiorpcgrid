@@ -4,7 +4,7 @@ import asyncio
 from aiorpcgrid.task import AsyncTask, State
 
 
-class AsyncClient():
+class AsyncClient:
     _provider = None
     _method = None
     _requests: dict = {}

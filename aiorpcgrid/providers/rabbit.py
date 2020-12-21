@@ -14,7 +14,7 @@ async def process_e(message: aio_pika.IncomingMessage):
 
 class RabbitProvider(AsyncBaseProvider):
     _protocol = None
-    #_queue = None
+    # _queue = None
     _remote_queue = None
     _timeout = None
     _remote_queue_name = None

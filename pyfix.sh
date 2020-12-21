@@ -11,6 +11,10 @@ poetry run black -l 79 -S --quiet $PY_FILES
 echo "Running flake8 (linter)..."
 poetry run flake8 $PY_FILES
 
+echo "Running mypy in place..."
+poetry run mypy $PY_FILES
+
+
 complex_files=$(poetry run radon mi -nc $PY_FILES)
 
 if [ "$complex_files" != "" ]; then

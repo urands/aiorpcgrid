@@ -2,6 +2,7 @@ import asyncio
 from enum import IntEnum, auto
 from uuid import uuid4
 
+
 class State(IntEnum):
     COMPLETED = 0
     CREATED = auto()
@@ -10,7 +11,8 @@ class State(IntEnum):
     FAILED = auto()
     TIMEOUT = auto()
 
-class AsyncTask():
+
+class AsyncTask:
 
     _parallel = True
 

@@ -39,7 +39,7 @@ class JsonRPC:
             datas = [json.loads(data)]
         tasks = []
         for data in datas:
-            tsk = Task()
+            tsk = AsyncTask()
             tsk.id = data.get('id')
             tsk.method = data.get('method')
             tsk.params = data.get('params')

@@ -4,7 +4,7 @@ import asyncio
 from aiorpcgrid.task import State
 
 
-class AsyncMethods():
+class AsyncMethods:
     async def call(self, method, *args, **kwargs):
         if method in self._methods:
             return await self._methods[method](*args, **kwargs)
@@ -20,7 +20,7 @@ class GlobalAsyncMethods(AsyncMethods):
         return class_._instance
 
 
-class AsyncServer():
+class AsyncServer:
     _loop = None
     _response_queue: asyncio.Queue = asyncio.Queue()
 
@@ -65,7 +65,7 @@ class AsyncServer():
         return
 
     async def method_call(self, task, future=None):
-        methods = GlobalMethods()
+        methods = GlobalAsyncMethods()
         try:
             task.result = await methods.call(task.method, *task.params)
             task.status = State.COMPLETED
