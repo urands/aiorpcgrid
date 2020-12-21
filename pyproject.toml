@@ -2,6 +2,9 @@
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.poetry.extras]
+    rabbit = ["aio-pika"]
+    all = ["aio-pika"]
 
 [tool.poetry]
 name = "aiorpcgrid"
@@ -34,7 +37,7 @@ classifiers = [
 ]
 [tool.poetry.dependencies]
 python = "^3.6"
-aio-pika = {version = "^6.7.1", extras = ["rabbit"]}
+aio-pika = {version = "^6.7.1", optional = true, extras = ["rabbit"]}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
